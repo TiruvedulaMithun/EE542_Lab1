@@ -22,6 +22,7 @@ router ospf
  network 192.168.1.0/24 area 0.0.0.0
  network 192.168.2.0/24 area 0.0.0.0
 line vty
+EOF
 cat >> /etc/quagga/zebra.conf << EOF
 interface enp0s8
  ip address 192.168.1.254/24
@@ -32,6 +33,7 @@ interface enp0s9
 interface lo
 ip forwarding
 line vty
+EOF
 sudo systemctl restart zebra.service
 sudo systemctl restart ospfd.service
 exit 

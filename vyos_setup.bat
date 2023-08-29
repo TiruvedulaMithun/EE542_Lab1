@@ -1,3 +1,4 @@
+config
 set interfaces ethernet eth0 address dhcp
 set interfaces ethernet eth0 description 'TO HOST'
 
@@ -15,7 +16,7 @@ set interfaces ethernet eth2 description 'TO PC2'
 set service dhcp-server shared-network-name intnet-2 subnet 192.168.2.0/24 default-router 192.168.2.254
 set service dhcp-server shared-network-name intnet-2 subnet 192.168.2.0/24 lease 86400
 set service dhcp-server shared-network-name intnet-2 subnet 192.168.2.0/24 range 0 start 192.168.2.9
-set service dhcp-server shared-network-name intnet-2 subnet 192.168.2.0/24 range 0 stop 192.168.2.2542
+set service dhcp-server shared-network-name intnet-2 subnet 192.168.2.0/24 range 0 stop 192.168.2.254
 set service dhcp-server shared-network-name intnet-1 subnet 192.168.2.0/24 domain-name 'intnet-2'
 set service dhcp-server shared-network-name intnet-1 subnet 192.168.2.0/24 dns-server 9.9.9.9
 
